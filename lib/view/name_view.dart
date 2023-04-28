@@ -8,13 +8,6 @@ class NameView extends StatefulWidget {
 }
 
 class _ChangeNameViewState extends State<NameView> {
-  String initialName = "ADITI";
-
-  void _changeName() {
-  setState(() {
-    var name = 'Chalisay';
-  });
-  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,9 +18,7 @@ class _ChangeNameViewState extends State<NameView> {
         child: SizedBox(
           width: double.infinity,
           child: ElevatedButton(
-            onPressed: () {
-                _changeName;
-            },
+            onPressed: () {},
             child: const Text(
               'Change Name',
               style: TextStyle(
@@ -41,4 +32,3 @@ class _ChangeNameViewState extends State<NameView> {
     );
   }
 }
-

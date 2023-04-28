@@ -19,6 +19,31 @@ class Dashboard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            //number generator
+            const SizedBox(height: 8),
+            ElevatedButton(
+              onPressed: () {
+              
+              Navigator.pushNamed(context, '/numberRoute');
+              },
+              child: const Text('Random Number game'),
+            ),
+            const SizedBox(height: 8),
+            ElevatedButton(
+              onPressed: () {
+              
+              Navigator.pushNamed(context, '/columnRoute');
+              },
+              child: const Text('Column view'),
+            ),
+            const SizedBox(height: 8),
+            ElevatedButton(
+              onPressed: () {
+              
+              Navigator.pushNamed(context, '/richtextRoute');
+              },
+              child: const Text('Rich text view'),
+            ),
             const SizedBox(height: 8),
             ElevatedButton(
               onPressed: () {
