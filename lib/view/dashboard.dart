@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:flutter_lab/app.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({super.key});
@@ -19,6 +16,40 @@ class Dashboard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            //ui
+            const SizedBox(height: 8),
+            ElevatedButton(
+              onPressed: () {
+              
+              Navigator.pushNamed(context, '/uiRoute');
+              },
+              child: const Text('UI'),
+            ),
+            //image
+            const SizedBox(height: 8),
+            ElevatedButton(
+              onPressed: () {
+              
+              Navigator.pushNamed(context, '/loadimageRoute');
+              },
+              child: const Text('Load Image'),
+            ),
+            const SizedBox(height: 8),
+            ElevatedButton(
+              onPressed: () {
+              
+              Navigator.pushNamed(context, '/containerRoute');
+              },
+              child: const Text('container'),
+            ),
+            const SizedBox(height: 8),
+            ElevatedButton(
+              onPressed: () {
+              
+              Navigator.pushNamed(context, '/outputRoute');
+              },
+              child: const Text('Output'),
+            ),
             //number generator
             const SizedBox(height: 8),
             ElevatedButton(
@@ -75,6 +106,8 @@ class Dashboard extends StatelessWidget {
               },
               child: const Text('Arithmetic'),
             ),
+
+            
           ],
         ),
       ),
