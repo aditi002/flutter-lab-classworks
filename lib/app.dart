@@ -8,6 +8,7 @@ import 'package:flutter_lab/view/name_view.dart';
 import 'package:flutter_lab/view/number_view.dart';
 import 'package:flutter_lab/view/output_view.dart';
 import 'package:flutter_lab/view/ui_view.dart';
+import 'package:flutter_lab/view/uidetails_view.dart';
 
 import 'view/dashboard.dart';
 import 'view/richText_view.dart';
@@ -34,7 +35,7 @@ class App extends StatelessWidget {
         '/containerRoute': (context) => const ContainerView(),
         '/loadimageRoute': (context) => const loadImageView(),
         '/uiRoute':(context) => const ui_view(),
-
+        '/detailRoute':(context) => const Detail_view(),
         
       },
     );
