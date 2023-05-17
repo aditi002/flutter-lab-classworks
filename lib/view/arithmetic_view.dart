@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_lab/common/show_my_message.dart';
 
 import '../model/arithmetic.dart';
 
@@ -44,12 +45,13 @@ class _ArithmeticViewState extends State<ArithmeticView> {
     arguments: result
   );
   }
-  // void sub(){
-  //   arithmetic = Arithmetic();
-  //   setState((){
-  //     result = arithmetic.sub(first,second);
-  //   });
-  // }
+  void sub(){
+    arithmetic = Arithmetic();
+    setState((){
+      result = arithmetic.sub(int.parse(firstController.text),
+        int.parse(secondController.text),);
+    });
+  }
   final mykey = GlobalKey<FormState>();
 
   @override
@@ -111,8 +113,10 @@ class _ArithmeticViewState extends State<ArithmeticView> {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
+                   
                       if(mykey.currentState!.validate()){
-                        add();
+                        sub();
+                        showMySnackBar(context, "ADDed");
                       }
                     },
                     child: const Text('ADD'),
@@ -123,22 +127,18 @@ class _ArithmeticViewState extends State<ArithmeticView> {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
+                    
+                      
                      if(mykey.currentState!.validate()){
                         add();
+                        showMySnackBar(context, "subbed");
                       }
                     },
                     child: const Text('SUB'),
                   ),
                 ),
-                const SizedBox(height: 8),
-                Text(
-                  'Sum is : $result',
-                  style: const TextStyle(
-                    fontSize: 20,
-                    fontStyle: FontStyle.italic,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+                
+                
               ],
             ),
           ),
